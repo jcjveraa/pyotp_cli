@@ -28,7 +28,7 @@ class TestPyotpCLI(unittest.TestCase):
         
     def test_verify(self):
         """A trivial test as it's supposed to be hard to truely test this"""
-        self.assertIsInstance(pyotp_wrapper.verify, bool)
+        self.assertIsInstance(pyotp_wrapper.verify('123456', pyotp_wrapper.random_base32()), bool)
 
 if __name__ == '__main__':
     unittest.main()

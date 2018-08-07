@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyotp_cli",
-    version="0.0.3",
+    version="0.1.0",
     url="https://github.com/jcjveraa/pyotp_cli",
     license="MIT License",
     author="Jelle Veraa",

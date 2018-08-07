@@ -1,7 +1,7 @@
 import argparse
 import pyotp
 
-# whole function Can be removed if pyotp accepts my pull request
+# whole function Can be removed and replace with pyopt.random_base32 if pyotp accepts my pull request
 def random_base32(length=16, random=None,
                   chars=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ234567')):
 
@@ -19,11 +19,8 @@ def random_base32(length=16, random=None,
 
 def generate_provisioning_uri(issuer_name, user_name, secret=None):
     secret = secret or random_base32()
-    print(pyotp.totp.TOTP(secret).provisioning_uri(user_name, issuer_name=issuer_name))
+    return pyotp.totp.TOTP(secret).provisioning_uri(user_name, issuer_name=issuer_name)
 
-# elif args.generate_16b32_secret:
-#     print(random_base32())
-
-# elif args.totp:
-#     totp = pyotp.TOTP(args.totp[0])
-#     print(totp.now()) 
+def verify(otp, secret, valid_window=1):
+    totp = pyotp.TOTP(secret)
+    return totp.verify(otp, valid_window=valid_window)

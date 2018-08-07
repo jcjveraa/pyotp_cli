@@ -11,7 +11,7 @@ setuptools.setup(
     name="pyotp_cli",
     version="0.1.0",
     url="https://github.com/jcjveraa/pyotp_cli",
-    license="MIT License",
+    license="GNU GPLv3",
     author="Jelle Veraa",
     author_email="3942301+jcjveraa@users.noreply.github.com",
     description="A small example package",

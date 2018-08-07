@@ -1,21 +1,6 @@
 import argparse
 import pyotp
-
-# whole function Can be removed if pyotp accepts my pull request
-def random_base32(length=16, random=None,
-                  chars=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ234567')):
-
-    # Use secrets module if available (Python version >= 3.6) per PEP 506.
-    try:
-        import secrets
-        random = secrets.SystemRandom()
-    except ImportError:
-        import random as _random
-        random = _random.SystemRandom()
-    return ''.join(
-        random.choice(chars)
-        for _ in range(length)
-    )
+from pyotp_wrapper import generate_provisioning_uri, random_base32
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-u", "--generate_provisioning_uri", help="Generates and returns a provisioning uri for user_name and issuer_name.",

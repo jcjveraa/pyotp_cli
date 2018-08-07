@@ -1,5 +1,5 @@
 import argparse
-from pyotp_wrapper import generate_provisioning_uri, random_base32, verify
+from pyotp_cli.pyotp_wrapper import generate_provisioning_uri, random_base32, verify
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-u", "--generate_provisioning_uri", help="Generates and returns a provisioning uri for user_name and issuer_name.",

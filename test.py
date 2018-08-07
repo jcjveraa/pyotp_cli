@@ -25,6 +25,10 @@ class TestPyotpCLI(unittest.TestCase):
         self.assertEqual(dict(parse_qsl(url.query)),
                         {'secret': 'wrn3pqx5uqxqvnqr',
                         'issuer': 'FooCorp!'})
+        
+    def test_verify(self):
+        """A trivial test as it's supposed to be hard to truely test this"""
+        self.assertIsInstance(pyotp_wrapper.verify, bool)
 
 if __name__ == '__main__':
     unittest.main()

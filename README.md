@@ -2,8 +2,8 @@
 Provides a command line interface for pyotp to interact more easily with other programs.
 
 ## usage
-`python -m pyotp_cli [-h] [-u user_name issuer_name] [-s secret]
-                   [-v otp secret validity_window] [-g]
+```
+python -m pyotp_cli [-h] [-u user_name issuer_name] [-s secret] [-v otp secret validity_window] [-g]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -19,3 +19,4 @@ optional arguments:
                         previous/future values that will be acceptad as true.
   -g, --generate_16b32_secret
                         Generates and returns a 16 character base32 secret.`
+```

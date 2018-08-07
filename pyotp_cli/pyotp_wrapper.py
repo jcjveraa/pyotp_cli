@@ -1,4 +1,3 @@
-import argparse
 import pyotp
 
 # whole function Can be removed and replace with pyopt.random_base32 if pyotp accepts my pull request

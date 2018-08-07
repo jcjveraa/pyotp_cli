@@ -16,6 +16,9 @@ install:
 script:
   - python test.py
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
 matrix:
   allow_failures:
     - python: pypy3

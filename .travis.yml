@@ -17,6 +17,7 @@ script:
   - python test.py
 
 after_success:
+  - coverage run test.py
   - codecov
 
 matrix:

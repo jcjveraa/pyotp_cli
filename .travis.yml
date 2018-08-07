@@ -14,7 +14,7 @@ install:
   - pip install coverage coveralls
 
 script:
-  - make test
+  - python test.py
 
 matrix:
   allow_failures:

@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/jcjveraa/pyotp_cli.svg?branch=master)](https://travis-ci.org/jcjveraa/pyotp_cli)
 [![Code coverage](https://codecov.io/gh/jcjveraa/pyotp_cli/branch/master/graph/badge.svg)](https://codecov.io/gh/jcjveraa/pyotp_cli/)
 # pyotp_cli
-Provides a command line interface for pyotp to interact more easily with other programs.
+Provides a command line interface for [pyotp](https://github.com/pyotp/pyotp) to interact more easily with other programs.
 
 ## usage
 ```
